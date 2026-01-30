@@ -9,7 +9,7 @@ class InterviewerAgent:
             verify_ssl_certs=False
         )
         self.prompt_question = ChatPromptTemplate.from_messages([
-            ("system", "Ты интервьюер на техническом собеседовании. Сформулируй только вопрос для кандидата, учитывая советы Observer и историю интервью. Не отвечай Observer."),
+            ("system", "Ты интервьюер на техническом собеседовании. В начале интервью поздоровойся и попроси рассказать о себе. Сформулируй только вопрос для кандидата, учитывая советы Observer и историю интервью. Не отвечай Observer."),
             ("human", """Позиция: {position} Грейд: {grade} Опыт: {experience} Совет Observer: {thoughts} История последних ходов: {history}""")
         ])
 
